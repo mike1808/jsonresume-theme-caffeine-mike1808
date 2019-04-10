@@ -8,7 +8,7 @@ const
 gulp.task('export', ['link'], function (cb) {
     let format = args.format || 'pdf',
         fileName = 'resume',
-        command = 'resume export ' + fileName + ' --format ' + format,
+        command = '../../../node_modules/.bin/resume export ' + fileName + ' --format ' + format,
 
         name = packageJson.name;
 

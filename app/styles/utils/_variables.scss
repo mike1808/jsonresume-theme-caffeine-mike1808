@@ -23,9 +23,9 @@ $secondary-font             : 'Josefin Sans', Helvetica, Arial, sans-serif;
 
 /*----- Dimensions and sizes -----*/
 
-$print-width            : 21cm;
-$print-height           : 29.7cm;
-$page-width             : 612px;
+$print-width            : 8.5in;
+$print-height           : 11in;
+$page-width             : 760px;
 $page-height            : 792px;
 
 $mobile-width           : 435px;
@@ -38,4 +38,5 @@ $font-unit              : 4px;
 $profile-pic-size       : 52px;
 $aside-width            : 160px;
 $aside-margin           : 20px;
-$pad-unit               : 5px;
+$pad-unit               : 4px;
+$rhythm                 : 24px;
