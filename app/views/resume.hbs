@@ -11,22 +11,23 @@
 	</head>
 	<body>
 		<main id="resume" class="page">
+            {{> grid }}
 			{{> resume-header}}
 			<div class="resume-content">
 				<aside class="left-column">
 					{{> about }}
 					{{> skills }}
-					{{> languages }}
-					{{> interests }}
-				</aside>
+                    {{> awards }}
+                    {{> publications }}
+                    {{> languages }}
+                    {{> interests }}
+                </aside>
 				<div class="right-column">
 					{{> summary}}
 					{{> work }}
 					{{> volunteer }}
-					{{> education }}
-					{{> awards }}
-					{{> publications }}
-					{{> references }}
+                    {{> education }}
+                    {{> references }}
 				</div>
 			</div>
 		</main>

@@ -5,3 +5,14 @@
 @function rhythm($multiplier: 1) {
     @return $rhythm * $multiplier;
 }
+
+
+@function type-scale($level) {
+    @return map-get(
+            map-get($type-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+    @return map-get(
+            map-get($type-settings, $level), 'line-height');
+}

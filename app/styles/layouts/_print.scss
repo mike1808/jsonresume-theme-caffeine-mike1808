@@ -8,26 +8,34 @@
         width: 100%;
         height: 100%;
         margin: 0;
-        padding: 36px 0 30px;
+        padding: 0;
         box-shadow: none;
 
         .resume-header,
         .resume-content {
-            padding: 0 22px 0 34px;
+            padding: 0;
         }
     }
 
     .container {
-        page-break-inside: avoid;
+        break-before: avoid;
+    }
+
+    .left-column .container {
+        break-inside: avoid;
     }
 
     .work-container {
         .item {
-            page-break-inside: avoid;
+            break-inside: avoid;
         }
     }
 
     .fa-external-link {
+        display: none;
+    }
+
+    .grid {
         display: none;
     }
 }

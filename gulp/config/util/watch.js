@@ -15,7 +15,7 @@ gulp.task('watch', function() {
     setTimeout(function() {
         browserSync.init({
             proxy: 'localhost:' + ports.resumeCli,    //resume-cli port
-            reloadDelay: 300,
+            reloadDelay: 500,
             port: ports.browserSync
         });
 
@@ -23,7 +23,10 @@ gulp.task('watch', function() {
         gulp.watch([
             'public/**/*',
             'resume.json'
-        ]).on('change', browserSync.reload);
+        ]).on('change', (...args) => {
+            console.log(args)
+            // browserSync.reload();
+        });
 
         gulp.watch('app/views/**/*.hbs', ['html']);
         gulp.watch('app/images/**/*', ['images']);

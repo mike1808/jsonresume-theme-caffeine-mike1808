@@ -4,7 +4,7 @@
 
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+            {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker" textClassName="uppercase"}}
         {{/location}}
     {{/if}}
 
@@ -25,5 +25,5 @@
             {{> social}}
         {{/each}}
     {{/if}}
-</section>
+</div>
 {{/resume.basics}}

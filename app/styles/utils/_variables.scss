@@ -36,7 +36,40 @@ $retina-width           : 1920px;
 
 $font-unit              : 4px;
 $profile-pic-size       : 52px;
-$aside-width            : 160px;
-$aside-margin           : 20px;
+$aside-width            : 22;
+$aside-margin           : 1;
 $pad-unit               : 4px;
-$rhythm                 : 24px;
+
+$grid-enabled           : true;
+
+$base-font-size: 1rem;
+$base-line-height: 1.61803398875 * $base-font-size;
+$rhythm                 : $base-line-height;
+
+$type-settings: (
+    -2: (
+        font-size: 0.8rem,
+        line-height: $base-line-height * 3 / 4
+    ),
+    -1: (
+        font-size: 0.75rem,
+        line-height: $base-line-height
+    ),
+    0: (
+        font-size: 1rem,
+        line-height: $base-line-height
+    ),
+    1: (
+        font-size: 1.1rem,
+        line-height: $base-line-height
+    ),
+    2: (
+        font-size: 1.333rem,
+        line-height: $base-line-height
+    ),
+    3: (
+        font-size: 2.5rem,
+        line-height: $base-line-height * 2
+    ),
+);
+

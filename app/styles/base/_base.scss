@@ -1,3 +1,7 @@
+html {
+    font-size: 14px;
+}
+
 body {
     @include lato();
 
@@ -5,7 +9,6 @@ body {
     margin: 50px 0 100px;
     letter-spacing: .3px;
     color: $secondary-color;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,19 +18,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     @include josefin(700);
-    @include font-size(10);
+    @include type-setting(3);
+
     letter-spacing: 1px;
 }
 
 h2 {
     @include josefin(300);
-    @include font-size(4);
+    @include type-setting(0);
+    line-height: $base-line-height * 1;
     letter-spacing: .5px;
 }
 
 h3 {
     @include lato(300);
-    @include font-size(3.5);
+    @include type-setting(2);
     letter-spacing: .4px;
 
     &.bold {
@@ -37,7 +42,7 @@ h3 {
 
 h4 {
     @include lato(300);
-    @include font-size(3);
+    @include type-setting(1);
 
     &.bold {
         font-weight: 700;
@@ -46,7 +51,7 @@ h4 {
 
 h5 {
     @include lato(300);
-    @include font-size(2.75);
+    @include type-setting(0);
 
     &.italic {
         font-style: italic;
@@ -55,7 +60,7 @@ h5 {
 
 h6 {
     @include lato();
-    @include font-size(2.5);
+    @include type-setting(-1);
 }
 
 a {
@@ -74,14 +79,14 @@ a {
 
 p,
 li {
-    @include font-size(2.75);
+    @include type-setting(0);
 }
 
 blockquote {
-    @include font-size(2.75);
+    @include type-setting(0);
     @include lato($isItalic: true);
 
-    margin: spacing(2) spacing(5);
+    margin: rhythm(0.5) spacing(5);
 }
 
 em {
@@ -89,21 +94,46 @@ em {
 }
 
 ul {
-    margin: spacing(2) 0 0;
-    -webkit-padding-start: spacing(5);
+    margin: rhythm(0.5) 0 0;
+    -webkit-padding-start: rhythm(3 / 4);
 
     li {
-        padding-left: spacing(2);
+        padding-left: rhythm(1 / 4);
     }
 
     &.minimal {
+        margin: 0;
         list-style: none;
         padding: 0;
 
         li {
-            margin-bottom: 3px;
+            display: inline;
+            margin-bottom: rhythm(1 / 4);
             padding-left: 0;
+
         }
+
+    }
+
+    &.inline {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline;
+            margin-bottom: rhythm(1 / 4);
+            padding-left: 0;
+
+            &:after {
+                content: ',';
+            }
+
+            &:last-child:after {
+                content: '';
+            }
+        }
+
     }
 
     &.two-column {

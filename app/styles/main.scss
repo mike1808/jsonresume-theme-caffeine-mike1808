@@ -1,4 +1,5 @@
 /* Utils */
+
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/functions';
@@ -7,6 +8,7 @@
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/global';
+@import 'base/grid';
 
 /* Layouts */
 @import 'layouts/page';
@@ -16,3 +18,5 @@
 @import 'components/info-tag';
 @import 'components/references';
 @import 'components/education';
+@import 'components/section';
+@import 'components/about';

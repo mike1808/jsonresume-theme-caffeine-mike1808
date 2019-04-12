@@ -9,12 +9,18 @@
             {{name}}
         {{/if}}
     </h3>
+    {{#if location }}
+        <h5 class="italic section-header__location">
+            <span> — </span>
+            {{location}}
+        </h5>
     {{/if}}
-    <h5 class="italic pull-right">
+    {{/if}}
+    <h5 class="italic section-header__date">
         {{#if startDate}}
-            <span class="startDate">{{formatDate startDate}}</span>
+            <span class="startDate">{{formatDate startDate dateFormat}}</span>
             {{#if endDate}}
-            <span class="endDate"> - {{formatDate endDate}}</span>
+            <span class="endDate"> - {{formatDate endDate dateFormat}}</span>
             {{else}}
             <span class="endDate"> - Present</span>
             {{/if}}

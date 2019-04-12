@@ -4,25 +4,36 @@
     min-height: $page-height;
     display: block;
     margin: 0 auto;
-    padding: 36px 22px 30px 34px;
+    padding: rhythm(1) 22px rhythm(1) 34px;
+
     @include shadow();
     @include clearfix();
+
+    position: relative;
+
+    &:hover {
+        > .baseline-grid {
+            opacity: 1;
+        }
+    }
+}
+
+.resume-content {
+    display: flex;
 }
 
 .left-column {
-    float: left;
-    width: $aside-width;
-    margin-right: $aside-margin;
+    width: rhythm($aside-width);
+    margin-right: rhythm($aside-margin);
     word-wrap: break-word;
 }
 
 .right-column {
     width: auto;
-    overflow: hidden;
 }
 
 .item {
-    margin-bottom: spacing(3);
+    margin-bottom: rhythm(1);
 
     &:last-child {
         margin-bottom: 0;

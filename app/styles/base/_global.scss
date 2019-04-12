@@ -1,20 +1,17 @@
 .container {
-    padding-top: spacing(4);
+    padding-top: rhythm(0.5);
+}
+
+.subcontainer {
+    padding-bottom: rhythm(1);
 }
 
 .keyline {
     width: spacing(9);
-    margin: 8px 0 10px;
+    margin: rhythm(1/8) 0 rhythm(3/8);
     border-top: 1px solid $primary-color;
 }
 
-.pull-left {
-    float: left;
-}
-
-.pull-right {
-    float: right;
-}
 
 .clearfix {
     @include clearfix();
@@ -33,5 +30,13 @@
 }
 
 .summary {
-    margin: spacing(1) 0 spacing(1);
+    margin: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
 }

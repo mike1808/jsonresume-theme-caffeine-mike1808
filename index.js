@@ -40,8 +40,9 @@ handlebars.registerHelper({
         return addressList.join('<br/>');
     },
 
-    formatDate: function(date) {
-        return moment(date).format('MM/YYYY');
+    formatDate: function (date, format='MM/YYYY') {
+        console.log(format)
+        return moment(date).format(format);
     }
 });
 
