@@ -4,10 +4,10 @@
 
     {{#each resume.work}}
         <section class="item">
-            {{> section-header name=this.position location=null }}
+            {{> section-header name=this.position location=null nameClass="primary" }}
 
             {{#if company}}
-            <h4>{{company}}</h4>
+            <h5>{{company}}</h5>
             {{/if}}
 
             {{#if summary}}
